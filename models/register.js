@@ -4,6 +4,7 @@ const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
     class Register extends Model {
         static associate({ Deposito }) {
+           
             this.belongsTo(Deposito, {
                 foreignKey: "Deposito_id",
                 as: "deposito",
@@ -13,42 +14,27 @@ module.exports = (sequelize, DataTypes) => {
     Register.init(
         {
             id: {
-                type: DataTypes.STRING,
-                allowNull: false,
+                type: DataTypes.UUID,
+                defaultValue: DataTypes.UUIDV4,
                 primaryKey: true,
             },
-            displayName: {
-                type: DataTypes.STRING,
-                allowNull: true,
-            },
-            email: {
+            nombre: {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
-            password: {
-                type: DataTypes.STRING,
-                allowNull: true,
-            },
-            emailVerified: {
-                type: DataTypes.STRING,
+            number: {
+                type: DataTypes.STRING(1000),
                 allowNull: false,
             },
-            providerId: {
-                type: DataTypes.STRING,
+            Country: {
+                type: DataTypes.STRING(1000),
                 allowNull: false,
             },
-            subscribePlan: {
-                type: DataTypes.STRING,
-                allowNull: false,
-            },
-            country: {
-                type: DataTypes.STRING,
-                allowNull: true,
-            },
-            state: {
+            Provincia: {
                 type: DataTypes.TEXT("long"),
-                allowNull: true,
+                allowNull: false,
             },
+          
 
             //-----------CATEGORY ID ASSOCIATIONS---------------------------
             // Category_id: {

@@ -11,7 +11,6 @@ router.get("/", (req, res) => {
 
 // Insert notification
 router.post("/new", (req, res) => {
-    console.log(req.body);
     db.Notification_master.create(req.body).then((notification) =>
         res.send(notification)
     );

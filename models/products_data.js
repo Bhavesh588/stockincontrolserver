@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             codigo: {
-                type: DataTypes.TEXT("long"),
+                type: DataTypes.STRING(1000),
                 allowNull: false,
             },
             description: {
@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             Size: {
-                type: DataTypes.TEXT("long"),
+                type: DataTypes.STRING,
                 allowNull: false,
             },
             Stock: {
@@ -54,15 +54,15 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             precioVenta: {
-                type: DataTypes.TEXT("long"),
+                type: DataTypes.STRING,
                 allowNull: false,
             },
             costoCompra: {
-                type: DataTypes.TEXT("long"),
+                type: DataTypes.STRING,
                 allowNull: false,
             },
             costoMenor: {
-                type: DataTypes.TEXT("long"),
+                type: DataTypes.STRING,
                 allowNull: false,
             },
 

@@ -26,4 +26,31 @@ router.put("/employee", (req, res) => {
     ).then(() => res.send("success"));
 });
 
+// Remove specific Deposito
+router.delete("/delete/:id", (req, res) => {
+    db.Deposito.destroy({
+        where: {
+            Deposito_id: req.params.id,
+        },
+    }).then(() => res.send("success"));
+});
+
+// Get Specific specific Deposito
+router.get("/:id", (req, res) => {
+    db.Deposito.findAll({
+        where: {
+            Deposito_id: req.params.id,
+        },
+    }).then((deposito) => res.send(deposito));
+});
+
+// edit client
+router.put("/edit", (req, res) => {
+    db.Deposito.update(req.body, {
+        where: {
+            Deposito_id: req.body.id,
+        },
+    }).then(() => res.send("successfully Updated"));
+});
+
 module.exports = router;

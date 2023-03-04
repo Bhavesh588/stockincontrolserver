@@ -28,6 +28,21 @@ router.put("/price", (req, res) => {
         }
     ).then(() => res.send("success"));
 });
+// Update Order Master
+router.put("/update", (req, res) => {
+    console.log(req.body);
+    db.Order_master.update(
+        req.body,
+        // {
+        //     Total_price: req.body.Total_price,
+        // },
+        {
+            where: {
+                Order_id: req.body.Order_id,
+            },
+        }
+    ).then((order) => res.send(order));
+});
 
 // Update Order Status
 router.put("/status", (req, res) => {

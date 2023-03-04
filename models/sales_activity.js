@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     Sales_Activity.init(
         {
             Sales_id: {
-                type: DataTypes.DOUBLE,
-                allowNull: false,
+                type: DataTypes.UUID,
+                defaultValue: DataTypes.UUIDV4,
                 primaryKey: true,
             },
             year: {
@@ -15,51 +15,51 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             Jan: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Feb: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Mar: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Apr: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             May: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Jun: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Jul: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Aug: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Sep: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Oct: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Nov: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
             Dec: {
-                type: DataTypes.STRING(1000),
+                type: DataTypes.TEXT,
                 allowNull: false,
             },
         },

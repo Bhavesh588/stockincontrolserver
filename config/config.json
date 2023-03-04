@@ -2,7 +2,7 @@
 	"development": {
 		"username": "root",
 		"password": "Bh@99090",
-		"database": "heroku_creacionesmayte",
+		"database": "storeincontrol",
 		"host": "localhost",
 		"dialect": "mysql"
 	},
